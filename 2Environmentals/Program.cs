@@ -15,8 +15,7 @@ namespace _2Environmentals
         }
 
         static void ShowEnvironmentDetails()
-        {   
-            
+        {
             foreach( DictionaryEntry de in Environment.GetEnvironmentVariables())            
             {                
                 Console.WriteLine(de.Key + " = " + de.Value);
