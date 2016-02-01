@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10MethodAndParameterModifie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11Arrays", "11Arrays\11Arrays.csproj", "{F9348C24-4D8D-4AFF-B16B-8276D1179A91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12EnumTypes", "12EnumTypes\12EnumTypes.csproj", "{4FFF888A-5171-4EAD-88AB-AB4CAE20DEFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13Structures", "13Structures\13Structures.csproj", "{EC17E487-33EE-482D-B384-99C1433EA0BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{F9348C24-4D8D-4AFF-B16B-8276D1179A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9348C24-4D8D-4AFF-B16B-8276D1179A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9348C24-4D8D-4AFF-B16B-8276D1179A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFF888A-5171-4EAD-88AB-AB4CAE20DEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFF888A-5171-4EAD-88AB-AB4CAE20DEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFF888A-5171-4EAD-88AB-AB4CAE20DEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFF888A-5171-4EAD-88AB-AB4CAE20DEFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC17E487-33EE-482D-B384-99C1433EA0BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC17E487-33EE-482D-B384-99C1433EA0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC17E487-33EE-482D-B384-99C1433EA0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC17E487-33EE-482D-B384-99C1433EA0BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
