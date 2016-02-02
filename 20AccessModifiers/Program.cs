@@ -28,8 +28,7 @@ namespace _20AccessModifiers
     class Person2
     {
         string name = "Default Person"; //default private
-        double weight = 90;
-        int age = 0;
+        double weight = 90;        
 
         public string PersonName 
         {
