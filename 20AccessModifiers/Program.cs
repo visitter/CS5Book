@@ -47,21 +47,20 @@ namespace _20AccessModifiers
         
         //automatic property
         public int Age { get; set; }
-        public bool IsDude { get; set; }
-        
+        public bool IsDude { get; set; }        
     }
 
 
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {            
             //A sample with public var
             /*
             Person person = new Person();
             person.name = "Ivan";
-            Console.WriteLine(person.name);*/
+            Console.WriteLine(person.name);
+            */
 
             Person1 pers = new Person1();
             System.Console.WriteLine(pers.getName());
@@ -72,8 +71,7 @@ namespace _20AccessModifiers
             pers2.IsDude = true;
             Console.WriteLine("Weight = {0}",pers2.Weight);
             Console.WriteLine("Is Dude: {0}", pers2.IsDude?"yes":"no");
-
-            
+                        
             System.Console.WriteLine(pers2.PersonName);
 
             Console.ReadLine();
