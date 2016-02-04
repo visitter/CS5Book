@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _25Inheritance
 {
-    partial class Employee
+    public partial class Employee
     {
         // Field data.
         private readonly string ssn;
@@ -14,8 +14,7 @@ namespace _25Inheritance
         private int empID;
         private float currPay;
         private int age;
-        
-        
+                
         //props
         public string SSN { get{return ssn;} }
         public string Name
@@ -76,7 +75,7 @@ namespace _25Inheritance
             this.ssn = ssn;
         }
         // Methods.
-        public void GiveBonus(float amount)
+        public virtual void GiveBonus(float amount)
         {
             currPay += amount;            
         }

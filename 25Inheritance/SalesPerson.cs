@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _25Inheritance
 {
-    class SalesPerson : Employee
+    public class SalesPerson : Employee
     {
         public int Sales { get; set; }
 

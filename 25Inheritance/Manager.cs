@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _25Inheritance
 {
-    class Manager:Employee
+    public class Manager:Employee
     {
         public int StockOptions { get; set; }
 
