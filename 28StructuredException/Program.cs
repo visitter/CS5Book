@@ -66,25 +66,80 @@ namespace _28StructuredException
                 Console.WriteLine("{0} is out of order...", PetName);
             else
             {
-                CurrentSpeed += delta;
-                if (CurrentSpeed > MaxSpeed)
+                if (delta < 0)
                 {
-                    //Console.WriteLine("{0} has overheated!", PetName);
-                    CurrentSpeed = 0;
-                    throw new Exception(String.Format("{0} has overheated", PetName));
+                    throw new ArgumentOutOfRangeException("delta", "\"Delta\" can NOT be negative!");
                 }
                 else
-                    Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
+                {
+                    CurrentSpeed += delta;
+                    if (CurrentSpeed > MaxSpeed)
+                    {
+                        //Console.WriteLine("{0} has overheated!", PetName);
+                        CurrentSpeed = 0;
+                        CarOverheatedException ex = new CarOverheatedException(String.Format("{0} has overheated", PetName),DateTime.Now);
+                        ex.HelpLink = "http://www.google.com";
+                        throw ex;
+                    }
+                    else
+                        Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
+                }
             }
         }
+    }
+
+
+    public class CarOverheatedException : ApplicationException
+    {
+        private string messageDetails = String.Empty;
+        public string CauseOfException { get; set; }
+        public DateTime TimeOfException { get; set; }
+
+        public CarOverheatedException() { }
+        public CarOverheatedException( string message, DateTime time )
+            :base(message)
+        {
+            CauseOfException = message;
+            TimeOfException = time;
+        }
+        public CarOverheatedException(string message, Exception inner)
+            : base(message, inner)
+        {
+
+        }
+
+    }
+
+    [Serializable]
+    public class MyException : Exception
+    {
+        public MyException() { }
+        public MyException(string message) : base(message) { }
+        public MyException(string message, Exception inner) : base(message, inner) { }
+        protected MyException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context)
+            : base(info, context) { }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            driveCar();
+            Console.ForegroundColor = ConsoleColor.Green;
+            //driveCar();
+            //stackExcept();
+            try
+            {
+                generalCatch();
+            }catch( CarOverheatedException coe){
+                Console.WriteLine(coe.InnerException.Message );
+            }
             Console.ReadLine(); 
+        }
+
+        static void stackExcept(){
+            driveCar();
         }
 
         static void driveCar()
@@ -96,10 +151,13 @@ namespace _28StructuredException
             try
             {
                 for (int i = 0; i < 10; i++)
-                    myCar.AccelerateEx(10);
-                //myCar.Accelerate(10);
+                    myCar.AccelerateEx(10); //myCar.Accelerate(10);
             }
-            catch (Exception e)
+            catch(ArgumentOutOfRangeException aoore)
+            {
+                Console.WriteLine(aoore.Message);
+            }
+            catch (CarOverheatedException e)
             {                
                 System.Reflection.ParameterInfo[] paramsInfo =  e.TargetSite.GetParameters();
                 String str = "";
@@ -108,9 +166,37 @@ namespace _28StructuredException
                     str += item;
 	            }
 
-                Console.WriteLine("Exception source: {0}",e.Source);
-                Console.WriteLine(e.TargetSite.MemberType+"->"+e.TargetSite.DeclaringType + "." + e.TargetSite.Name+"("+str+")");
-                Console.WriteLine("Exception message: {0}", e.Message); 
+                Console.WriteLine("\nException source: {0}", e.Source);
+                Console.WriteLine(e.TargetSite.MemberType+" -> "+e.TargetSite.DeclaringType + "." + e.TargetSite.Name+"("+str+")");
+                Console.WriteLine("\nException message: {0}", e.Message);
+                Console.WriteLine("\nException stack:\n {0}", e.StackTrace);
+                Console.WriteLine("\nException helpLink: {0}", e.HelpLink);              
+            }
+        }
+        
+
+        static void generalCatch()
+        {
+            Car myCar = new Car();
+            try
+            {                
+                Console.WriteLine(@"Attempting to accelerate with ""-10""");
+                myCar.AccelerateEx(1030);
+            }
+            catch(CarOverheatedException coe)
+            {
+                try
+                {
+                    System.IO.File.OpenText(@"C:\MyLog.txt");
+                }
+                catch( System.IO.FileNotFoundException fnfe){
+                    throw new CarOverheatedException(coe.Message, fnfe);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Opps something went wrong!");
+                
             }
         }
     }
