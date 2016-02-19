@@ -10,6 +10,8 @@ namespace _25Inheritance
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+
             Employee emp = new Employee("Peter", 1, 1000, 21, "123-123-1231");
             emp.DisplayStats();
 
