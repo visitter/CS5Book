@@ -66,6 +66,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29Interfaces", "29Interface
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30CollectionsAndGenerics", "30CollectionsAndGenerics\30CollectionsAndGenerics.csproj", "{133BB10D-8F63-4D37-B0D2-4215C86FE16C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "31DelegatesAndEvents", "DelegatesAndEvents\31DelegatesAndEvents.csproj", "{D83332CB-DD8B-42BC-BDD5-81E08929126E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,10 @@ Global
 		{133BB10D-8F63-4D37-B0D2-4215C86FE16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{133BB10D-8F63-4D37-B0D2-4215C86FE16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{133BB10D-8F63-4D37-B0D2-4215C86FE16C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D83332CB-DD8B-42BC-BDD5-81E08929126E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D83332CB-DD8B-42BC-BDD5-81E08929126E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D83332CB-DD8B-42BC-BDD5-81E08929126E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D83332CB-DD8B-42BC-BDD5-81E08929126E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

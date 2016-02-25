@@ -101,7 +101,8 @@ namespace _30CollectionsAndGenerics
             //workWithQueue();
             //workWithSortedSet();
             //workWithObservableCollection();
-            myGenericSwap();
+            //myGenericSwap();
+            wokrWithHashSet();
                         
             Console.ReadLine();
         }
@@ -292,6 +293,16 @@ namespace _30CollectionsAndGenerics
             Console.WriteLine("X={0}, Y={1}", x, y);
             Swap<int>(ref x, ref y);
             Console.WriteLine("X={0}, Y={1}", x, y);
-        }        
+        }
+        static void wokrWithHashSet()
+        {
+            HashSet<int> hs = new HashSet<int>();
+            hs.Add(1);
+            hs.Add(3);            
+            hs.Add(2);
+            hs.Add(3);
+                        
+            showElements<int>(hs.GetEnumerator());
+        }
     }
 }
