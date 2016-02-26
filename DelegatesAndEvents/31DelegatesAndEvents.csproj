@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ActionAndFunc.cs" />
     <Compile Include="MyCar.cs" />
+    <Compile Include="MyEventCarClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

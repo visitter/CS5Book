@@ -71,6 +71,28 @@ namespace DelegatesAndEvents
             Console.WriteLine(func.Invoke("Ivan", "Zhotev", 34 ));
         }
 
+        static void workWithEvents()
+        {
+            MyEventCarClass myCar = new MyEventCarClass(){ CurrentSpeed = 10, MaxSpeed = 80 };
+            myCar.AboutToBlow += new MyEventCarClass.CarEngineHandler(HandleTheEngine);            
+            myCar.Exploded += new MyEventCarClass.CarEngineHandler(HandleTheNoise);
+            myCar.OnStart += myCar_OnStart;
+
+            if (myCar != null)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    myCar.Accelerate(10);
+                    System.Threading.Thread.Sleep(1000);
+                }
+            }            
+        }
+
+        static void myCar_OnStart(object sender, CarEventArgs args)
+        {
+            Console.WriteLine("This car {0} engine is {1} at {2}", sender.GetType().Name, args.message, args.timeStamp.ToString());
+        }
+        
         //helper methods for the delegates -> these methods have been assinged to the delegates
         static void HandleTheEngine(string msg)
         {
@@ -118,7 +140,8 @@ namespace DelegatesAndEvents
             //HitTheGas(car);
             //workWithGenericDelegate();
             //workWithAction();
-            workWithFunc();
+            //workWithFunc();
+            workWithEvents();
             Console.ReadLine();
         }
     }
