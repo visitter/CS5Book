@@ -141,7 +141,9 @@ namespace DelegatesAndEvents
             //workWithGenericDelegate();
             //workWithAction();
             //workWithFunc();
-            workWithEvents();
+            //workWithEvents();
+            //Lambdas.testLambda();
+            Lambdas.testAgeCompareLambda("John", 18);
             Console.ReadLine();
         }
     }

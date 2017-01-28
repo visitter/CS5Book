@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D83332CB-DD8B-42BC-BDD5-81E08929126E}</ProjectGuid>
+    <ProjectGuid>{0566D726-1D19-4544-AFAF-F98C0A989A23}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DelegatesAndEvents</RootNamespace>
-    <AssemblyName>DelegatesAndEvents</AssemblyName>
+    <RootNamespace>_34ObjectsLifetime</RootNamespace>
+    <AssemblyName>34ObjectsLifetime</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,10 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionAndFunc.cs" />
-    <Compile Include="Lambdas.cs" />
-    <Compile Include="MyCar.cs" />
-    <Compile Include="MyEventCarClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

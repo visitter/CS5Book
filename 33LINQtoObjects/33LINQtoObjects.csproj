@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D83332CB-DD8B-42BC-BDD5-81E08929126E}</ProjectGuid>
+    <ProjectGuid>{272B0B42-F00C-4F0C-974F-627CC1804881}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DelegatesAndEvents</RootNamespace>
-    <AssemblyName>DelegatesAndEvents</AssemblyName>
+    <RootNamespace>_33LINQtoObjects</RootNamespace>
+    <AssemblyName>33LINQtoObjects</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,10 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionAndFunc.cs" />
-    <Compile Include="Lambdas.cs" />
-    <Compile Include="MyCar.cs" />
-    <Compile Include="MyEventCarClass.cs" />
+    <Compile Include="MyExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
