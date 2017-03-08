@@ -35,7 +35,7 @@ namespace _34ObjectsLifetime
         
             public void Dispose()
             {
-                Console.WriteLine("In Dispose "+this.Name);
+                Console.WriteLine("In Dispose of"+this.Name);
                 GC.SuppressFinalize(this);
             }
         }
